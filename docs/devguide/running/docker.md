@@ -121,7 +121,7 @@ docker build -t conductor:serverAndUI -f serverAndUI/Dockerfile ../
  - With external DB: `docker run -p 8080:8080 -p 80:5000 -d -t -e "CONFIG_PROP=config.properties" conductor:serverAndUI`
 
 ## Elasticsearch
-Elasticsearch is optional, please be aware that disable it will make most of the conductor UI not functional.
+Elasticsearch is optional, but please be aware that disabling it will make most of the conductor UI not functional.
 
 ### How to enable Elasticsearch
 * Set `conductor.indexing.enabled=true` in your_config.properties
@@ -135,7 +135,7 @@ E.g.: `conductor.elasticsearch.url=http://es:9200`
 
 
 ## Troubleshooting 
-To troubleshoot a failed startup, check the server logss located at `/app/logs` (default directory in dockerfile)
+To troubleshoot a failed startup, check the server logs located at `/app/logs` (default directory in dockerfile)
 
 ## Potential problem when using Docker Images
 
